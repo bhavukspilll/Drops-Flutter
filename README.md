@@ -54,6 +54,8 @@ Drops.show(
     shape: DropShape.pill,
  );
 ```
+<img src="https://github.com/mdazharuddin1011999/UPI-Plugin-Flutter/raw/master/images/success.jpg" alt="Success Status" width="200">
+
 Heres the full list of parameters that you can use to adjust the Drop to match your needs:
 
 ```dart
@@ -73,8 +75,7 @@ Heres the full list of parameters that you can use to adjust the Drop to match y
     EdgeInsets? padding,
     DropShape? shape,
     bool? highContrastText
-```    
-    
+```
 
 ## Additional information
 
