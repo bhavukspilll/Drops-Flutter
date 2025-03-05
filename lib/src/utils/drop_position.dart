@@ -1,0 +1,1 @@
+enum DropPosition { top, bottom }
