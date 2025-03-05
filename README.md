@@ -15,9 +15,7 @@ A µFramework for showing alerts like the one used when copying from pasteboard 
 
 ## Features
 
-
-![example](screenshots/example.gif)
-
+<img src="screenshots/example.gif" width="300">
 
 ## Getting started
 
@@ -58,6 +56,7 @@ Drops.show(
 ```
 
 Heres the full list of parameters that you can use to adjust the Drop to match your needs:
+
 ```dart
     String title,
     Color? backgroundColor,
