@@ -15,7 +15,9 @@ A µFramework for showing alerts like the one used when copying from pasteboard 
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+
+![example](screenshots/example.mov)
+
 
 ## Getting started
 
@@ -31,11 +33,6 @@ Then import:
 ```dart
 import 'package:drops/drops.dart';
 ```
-
-## Showcase
-
-[Watch the video](https://github.com/MaherSafadii/Drops-Flutter/blob/main/screenshots/example.mov)
-
 
 ## Usage
 
