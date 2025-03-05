@@ -16,7 +16,7 @@ A µFramework for showing alerts like the one used when copying from pasteboard 
 ## Features
 
 
-![example](screenshots/example.mov)
+![example](screenshots/example.gif)
 
 
 ## Getting started
