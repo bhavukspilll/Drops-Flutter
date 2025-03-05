@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-A µFramework for showing alerts like the one used when copying from pasteboard or connecting Apple pencil
+A µFramework for showing alerts like the one used when copying from pasteboard or connecting Apple pencil and the alert shown on iPhones when using the silent toggle.
 
 ## Features
 
@@ -19,8 +19,17 @@ TODO: List what your package can do. Maybe include images, gifs, or videos.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add to your dependencies:
+
+'''yaml
+dependencies:
+  interactive_slider: ^0.5.0
+'''
+Then import:
+
+'''dart
+import 'package:interactive_slider/interactive_slider.dart';
+'''
 
 ## Usage
 
