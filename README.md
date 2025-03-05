@@ -32,6 +32,11 @@ Then import:
 import 'package:drops/drops.dart';
 ```
 
+## Showcase
+
+[Watch the video](https://github.com/MaherSafadii/Drops-Flutter/blob/main/screenshots/example.mov)
+
+
 ## Usage
 
 To show a Drop all you have to do it the following:
@@ -56,7 +61,6 @@ Drops.show(
 ```
 
 Heres the full list of parameters that you can use to adjust the Drop to match your needs:
-
 ```dart
     String title,
     Color? backgroundColor,
