@@ -37,7 +37,7 @@ import 'package:drops/drops.dart';
 To show a Drop all you have to do it the following:
 
 ```dart
-Drops.show(context, title: 'Drops are amaaazing!',);
+Drops.show(context, title: 'Why did dash cross the road?',);
 ```
 
 this displays a bare minimum Drop, to get the most, you can customize them like this:
@@ -54,7 +54,6 @@ Drops.show(
     shape: DropShape.pill,
  );
 ```
-<img src="https://github.com/mdazharuddin1011999/UPI-Plugin-Flutter/raw/master/images/success.jpg" alt="Success Status" width="200">
 
 Heres the full list of parameters that you can use to adjust the Drop to match your needs:
 
