@@ -23,29 +23,59 @@ Add to your dependencies:
 
 ```yaml
 dependencies:
-  interactive_slider: ^0.5.0
+  drops: ^0.0.1
 ```
+
 Then import:
 
 ```dart
-import 'package:interactive_slider/interactive_slider.dart';
+import 'package:drops/drops.dart';
 ```
 
 ## Usage
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+
+To show a Drop all you have to do it the following:
 
 ```dart
-const like = 'sample';
+Drops.show(context, title: 'Drops are amaaazing!',);
 ```
+
+this displays a bare minimum Drop, to get the most, you can customize them like this:
+
+```dart
+Drops.show(
+    context,
+    title: 'Title',
+    subtitle: 'subtitle',
+    icon: CupertinoIcons.smiley_fill,
+    isDestructive: false,
+    highContrastText: true,
+    position: DropPosition.top,
+    shape: DropShape.pill,
+ );
+```
+Heres the full list of parameters that you can use to adjust the Drop to match your needs:
+
+```dart
+    String title,
+    Color? backgroundColor,
+    Duration duration = const Duration(seconds: 3),
+    Duration? transitionDuration = const Duration(milliseconds: 700),
+    TextStyle? textStyle,
+    Curve curve = Curves.easeOutExpo,
+    Curve? reverseCurve,
+    String? subtitle,
+    IconData? icon,
+    bool? isDestructive,
+    TextStyle? titleTextStyle,
+    TextStyle? subtitleTextStyle,
+    DropPosition? position = DropPosition.top,
+    EdgeInsets? padding,
+    DropShape? shape,
+    bool? highContrastText
+```    
+    
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
-
-
-
-
-
+Report any bugs if any via github.
