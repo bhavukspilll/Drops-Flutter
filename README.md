@@ -21,18 +21,17 @@ TODO: List what your package can do. Maybe include images, gifs, or videos.
 
 Add to your dependencies:
 
-'''yaml
+```yaml
 dependencies:
   interactive_slider: ^0.5.0
-'''
+```
 Then import:
 
-'''dart
+```dart
 import 'package:interactive_slider/interactive_slider.dart';
-'''
+```
 
 ## Usage
-
 TODO: Include short and useful examples for package users. Add longer examples
 to `/example` folder.
 
