@@ -9,7 +9,7 @@ class Drops {
     required String title,
     Color? backgroundColor,
     Duration duration = const Duration(seconds: 3),
-    Duration? transitionDuration = const Duration(milliseconds: 1000),
+    Duration? transitionDuration = const Duration(milliseconds: 700),
     TextStyle? textStyle,
     Curve curve = Curves.easeOutExpo,
     Curve? reverseCurve,
