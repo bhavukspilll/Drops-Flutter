@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-A µFramework for showing alerts like the one used when copying from pasteboard or connecting Apple pencil and the alert shown on iPhones when using the silent toggle.
+A pacakge for showing alerts like the one used when copying from pasteboard or connecting Apple pencil and the alert shown on iPhones when using the silent toggle.
 
 ## Features
 
