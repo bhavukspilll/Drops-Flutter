@@ -25,28 +25,29 @@ class Drops {
   }) {
     OverlayEntry? currentOverlay;
     currentOverlay = OverlayEntry(
-      builder: (context) => _DropsWidget(
-        title: title,
-        backgroundColor: backgroundColor,
-        duration: duration,
-        transitionDuration: transitionDuration,
-        curve: curve,
-        reverseCurve: reverseCurve,
-        isDestructive: isDestructive ?? false,
-        subtitle: subtitle,
-        titleTextStyle: titleTextStyle,
-        subtitleTextStyle: subtitleTextStyle,
-        position: position,
-        padding: padding,
-        shape: shape,
-        highContrastText: highContrastText ?? true,
-        icon: icon,
-        onDismiss: () {
-          currentOverlay?.remove();
+      builder:
+          (context) => _DropsWidget(
+            title: title,
+            backgroundColor: backgroundColor,
+            duration: duration,
+            transitionDuration: transitionDuration,
+            curve: curve,
+            reverseCurve: reverseCurve,
+            isDestructive: isDestructive ?? false,
+            subtitle: subtitle,
+            titleTextStyle: titleTextStyle,
+            subtitleTextStyle: subtitleTextStyle,
+            position: position,
+            padding: padding,
+            shape: shape,
+            highContrastText: highContrastText ?? true,
+            icon: icon,
+            onDismiss: () {
+              currentOverlay?.remove();
 
-          currentOverlay = null;
-        },
-      ),
+              currentOverlay = null;
+            },
+          ),
     );
     Overlay.of(context).insert(currentOverlay!);
   }
@@ -93,8 +94,7 @@ class _DropsWidget extends StatefulWidget {
   _DropsWidgetState createState() => _DropsWidgetState();
 }
 
-class _DropsWidgetState extends State<_DropsWidget>
-    with TickerProviderStateMixin {
+class _DropsWidgetState extends State<_DropsWidget> with TickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<Offset> _offsetAnimation;
 
@@ -104,8 +104,7 @@ class _DropsWidgetState extends State<_DropsWidget>
   void initState() {
     super.initState();
 
-    _animationController =
-        AnimationController(duration: widget.transitionDuration, vsync: this);
+    _animationController = AnimationController(duration: widget.transitionDuration, vsync: this);
 
     _offsetAnimation = Tween<Offset>(
       begin: Offset(0, widget.position == DropPosition.top ? -1 : 1),
@@ -125,13 +124,11 @@ class _DropsWidgetState extends State<_DropsWidget>
     });
 
     _scrollController.addListener(() {
-      if (_scrollController.offset > 30 &&
-          widget.position == DropPosition.top) {
+      if (_scrollController.offset > 30 && widget.position == DropPosition.top) {
         _dismissAlert();
       }
 
-      if (_scrollController.offset < -30 &&
-          widget.position == DropPosition.bottom) {
+      if (_scrollController.offset < -30 && widget.position == DropPosition.bottom) {
         _dismissAlert();
       }
     });
@@ -155,9 +152,7 @@ class _DropsWidgetState extends State<_DropsWidget>
     return Positioned(
       left: 0,
       top: widget.position == DropPosition.top ? 0 : null,
-      bottom: widget.position == DropPosition.bottom
-          ? 0 + MediaQuery.of(context).viewPadding.bottom
-          : null,
+      bottom: widget.position == DropPosition.bottom ? 0 + MediaQuery.of(context).viewPadding.bottom : null,
       right: 0,
       child: SlideTransition(
         position: _offsetAnimation,
@@ -165,17 +160,12 @@ class _DropsWidgetState extends State<_DropsWidget>
           clipBehavior: Clip.none,
           controller: _scrollController,
           hitTestBehavior: HitTestBehavior.deferToChild,
-          physics: const AlwaysScrollableScrollPhysics(
-              parent: BouncingScrollPhysics()),
+          physics: const AlwaysScrollableScrollPhysics(parent: BouncingScrollPhysics()),
           child: SafeArea(
             child: Center(
               child: Container(
-                margin: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                ),
-                clipBehavior: widget.shape == DropShape.squared
-                    ? Clip.none
-                    : Clip.antiAlias,
+                margin: const EdgeInsets.symmetric(horizontal: 10),
+                clipBehavior: widget.shape == DropShape.squared ? Clip.none : Clip.antiAlias,
                 decoration: ShapeDecoration(
                   shape: const StadiumBorder(),
                   shadows: [
@@ -189,14 +179,14 @@ class _DropsWidgetState extends State<_DropsWidget>
                 ),
                 child: CupertinoPopupSurface(
                   child: Padding(
-                    padding: widget.padding ??
+                    padding:
+                        widget.padding ??
                         EdgeInsets.only(
-                          left: widget.subtitle != null && widget.icon == null
-                              ? 30
-                              : 20,
-                          right: widget.icon != null
-                              ? 28
-                              : widget.subtitle != null
+                          left: widget.subtitle != null && widget.icon == null ? 30 : 20,
+                          right:
+                              widget.icon != null
+                                  ? 28
+                                  : widget.subtitle != null
                                   ? 30
                                   : 20,
                           top: widget.subtitle != null ? 10 : 16,
@@ -211,13 +201,12 @@ class _DropsWidgetState extends State<_DropsWidget>
                         if (widget.icon != null)
                           Icon(
                             widget.icon,
-                            color: widget.isDestructive
-                                ? CupertinoColors.destructiveRed
-                                    .resolveFrom(context)
-                                : CupertinoColors.secondaryLabel
-                                    .resolveFrom(context),
+                            color:
+                                widget.isDestructive
+                                    ? CupertinoColors.destructiveRed.resolveFrom(context)
+                                    : CupertinoColors.secondaryLabel.resolveFrom(context),
                           ),
-                        Expanded(
+                        Flexible(
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -226,14 +215,14 @@ class _DropsWidgetState extends State<_DropsWidget>
                               Text(
                                 widget.title,
                                 overflow: TextOverflow.ellipsis,
-                                maxLines: 2,
-                                style: widget.titleTextStyle ??
+                                maxLines: 1,
+                                style:
+                                    widget.titleTextStyle ??
                                     TextStyle(
-                                      color: widget.highContrastText
-                                          ? CupertinoColors.label
-                                              .resolveFrom(context)
-                                          : CupertinoColors.secondaryLabel
-                                              .resolveFrom(context),
+                                      color:
+                                          widget.highContrastText
+                                              ? CupertinoColors.label.resolveFrom(context)
+                                              : CupertinoColors.secondaryLabel.resolveFrom(context),
                                       fontSize: 15,
                                       fontWeight: FontWeight.w600,
                                     ),
@@ -245,14 +234,16 @@ class _DropsWidgetState extends State<_DropsWidget>
                                   children: [
                                     const SizedBox(height: 3),
                                     Text(
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 1,
                                       widget.subtitle!,
-                                      style: widget.subtitleTextStyle ??
+                                      style:
+                                          widget.subtitleTextStyle ??
                                           TextStyle(
-                                            color: widget.highContrastText
-                                                ? CupertinoColors.secondaryLabel
-                                                    .resolveFrom(context)
-                                                : CupertinoColors.tertiaryLabel
-                                                    .resolveFrom(context),
+                                            color:
+                                                widget.highContrastText
+                                                    ? CupertinoColors.secondaryLabel.resolveFrom(context)
+                                                    : CupertinoColors.tertiaryLabel.resolveFrom(context),
                                             fontSize: 14,
                                             fontWeight: FontWeight.w600,
                                           ),
