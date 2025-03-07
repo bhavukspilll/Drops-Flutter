@@ -13,3 +13,5 @@
 - Added a titleMaxLines parameter
 - Added a subtitleMaxLines parametet
 - Fixed sizing and padding to make the Drops more polished
+
+

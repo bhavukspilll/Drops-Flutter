@@ -58,22 +58,24 @@ Drops.show(
 Heres the full list of parameters that you can use to adjust the Drop to match your needs:
 
 ```dart
-    String title,
-    Color? backgroundColor,
-    Duration duration = const Duration(seconds: 3),
-    Duration? transitionDuration = const Duration(milliseconds: 700),
-    TextStyle? textStyle,
-    Curve curve = Curves.easeOutExpo,
-    Curve? reverseCurve,
-    String? subtitle,
-    IconData? icon,
-    bool? isDestructive,
-    TextStyle? titleTextStyle,
-    TextStyle? subtitleTextStyle,
-    DropPosition? position = DropPosition.top,
+    required String title
+    Duration duration
+    Duration? transitionDuration
+    TextStyle? textStyle
+    Curve curve = Curves.easeOutExpo
+    Curve? reverseCurve
+    String? subtitle
+    IconData? icon
+    bool isDestructive
+    TextStyle? titleTextStyle
+    TextStyle? subtitleTextStyle
+    DropPosition position
     EdgeInsets? padding,
-    DropShape? shape,
-    bool? highContrastText
+    DropShape shape
+    bool highContrastText
+    Color? iconColor 
+    int titleMaxLines  
+    int subtitleMaxLines  
 ```
 
 ## Additional information
