@@ -15,3 +15,6 @@
 - Fixed sizing and padding to make the Drops more polished
 
 
+## 0.0.4
+
+- Changed the way how multiple drops are showed at the same time instead of showing at the same time they show in a sequence
