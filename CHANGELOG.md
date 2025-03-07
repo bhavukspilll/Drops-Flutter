@@ -18,3 +18,7 @@
 ## 0.0.4
 
 - Changed the way how multiple drops are showed at the same time instead of showing at the same time they show in a sequence
+
+## 0.0.5
+
+- Added a showFromDrop function to show a drop from a Drop() object

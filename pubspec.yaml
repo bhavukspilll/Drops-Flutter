@@ -1,6 +1,6 @@
 name: drops
 description: "A pacakge for showing alerts like the one used when copying from pasteboard or connecting Apple pencil and the alert shown on iPhones when using the silent toggle."
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/MaherSafadii/Drops-Flutter
 repository: https://github.com/MaherSafadii/Drops-Flutter
 
