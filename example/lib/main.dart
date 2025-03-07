@@ -34,7 +34,13 @@ class _DropsExampleState extends State<DropsExample> {
               CupertinoButton.filled(
                 child: Text('Basic drop'),
                 onPressed: () {
-                  Drops.show(context, title: 'Basic drop');
+                  Drops.show(context, title: 'Basic');
+                },
+              ),
+              CupertinoButton.filled(
+                child: Text('Basic drop with icon'),
+                onPressed: () {
+                  Drops.show(context, title: 'Basic drop', icon: CupertinoIcons.airplane);
                 },
               ),
               CupertinoButton.filled(
@@ -64,11 +70,20 @@ class _DropsExampleState extends State<DropsExample> {
               CupertinoButton.filled(
                 child: Text('bottom positioned drop'),
                 onPressed: () {
+                  Drops.show(context, title: 'Bottom positioned', subtitle: 'subtitle', position: DropPosition.bottom);
+                },
+              ),
+              CupertinoButton.filled(
+                child: Text('Do not disturb example'),
+                onPressed: () {
                   Drops.show(
                     context,
-                    title: 'Bottom positioned drop',
-                    subtitle: 'subtitle',
-                    position: DropPosition.bottom,
+                    title: 'Do Not Disturb',
+                    icon: CupertinoIcons.moon_fill,
+                    iconColor: CupertinoColors.systemIndigo,
+                    duration: Duration(seconds: 2),
+                    subtitle: 'Off',
+                    position: DropPosition.top,
                   );
                 },
               ),
