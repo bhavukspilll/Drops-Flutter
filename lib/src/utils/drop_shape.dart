@@ -1,1 +1,0 @@
-enum DropShape { pill, squared }

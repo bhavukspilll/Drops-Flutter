@@ -10,7 +10,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CupertinoApp(debugShowCheckedModeBanner: false, home: DropsExample());
+    return const CupertinoApp(
+      debugShowCheckedModeBanner: false,
+      home: DropsExample(),
+    );
   }
 }
 
@@ -40,13 +43,21 @@ class _DropsExampleState extends State<DropsExample> {
               CupertinoButton.filled(
                 child: Text('Basic drop with icon'),
                 onPressed: () {
-                  Drops.show(context, title: 'Basic drop', icon: CupertinoIcons.airplane);
+                  Drops.show(
+                    context,
+                    title: 'Basic drop',
+                    icon: CupertinoIcons.drop_fill,
+                  );
                 },
               ),
               CupertinoButton.filled(
                 child: Text('Drop with subtitle'),
                 onPressed: () {
-                  Drops.show(context, title: 'Basic drop', subtitle: 'subtitle');
+                  Drops.show(
+                    context,
+                    title: 'Basic drop',
+                    subtitle: 'subtitle',
+                  );
                 },
               ),
               CupertinoButton.filled(
@@ -64,13 +75,25 @@ class _DropsExampleState extends State<DropsExample> {
               CupertinoButton.filled(
                 child: Text('Squared drop'),
                 onPressed: () {
-                  Drops.show(context, title: 'Basic drop', subtitle: 'subtitle', shape: DropShape.squared);
+                  Drops.show(
+                    context,
+                    title: 'Squared drop',
+                    subtitle: 'subtitle',
+                    icon: CupertinoIcons.drop_fill,
+                    iconColor: CupertinoColors.activeBlue,
+                    shape: DropShape.squared,
+                  );
                 },
               ),
               CupertinoButton.filled(
                 child: Text('bottom positioned drop'),
                 onPressed: () {
-                  Drops.show(context, title: 'Bottom positioned', subtitle: 'subtitle', position: DropPosition.bottom);
+                  Drops.show(
+                    context,
+                    title: 'Bottom positioned',
+                    subtitle: 'subtitle',
+                    position: DropPosition.bottom,
+                  );
                 },
               ),
               CupertinoButton.filled(
@@ -81,6 +104,20 @@ class _DropsExampleState extends State<DropsExample> {
                     title: 'Do Not Disturb',
                     icon: CupertinoIcons.moon_fill,
                     iconColor: CupertinoColors.systemIndigo,
+                    duration: Duration(seconds: 2),
+                    subtitle: 'Off',
+                    position: DropPosition.top,
+                  );
+                },
+              ),
+              CupertinoButton.filled(
+                child: Text('Airplane mode'),
+                onPressed: () {
+                  Drops.show(
+                    context,
+                    title: 'Airplane mode',
+                    icon: CupertinoIcons.airplane,
+                    iconColor: CupertinoColors.activeOrange,
                     duration: Duration(seconds: 2),
                     subtitle: 'Off',
                     position: DropPosition.top,
