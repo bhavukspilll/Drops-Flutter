@@ -164,7 +164,7 @@ class _DropsWidgetState extends State<_DropsWidget> with TickerProviderStateMixi
           child: SafeArea(
             child: Center(
               child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 23),
                 clipBehavior: widget.shape == DropShape.squared ? Clip.none : Clip.antiAlias,
                 decoration: ShapeDecoration(
                   shape: const StadiumBorder(),
