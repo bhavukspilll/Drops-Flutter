@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import 'drop_position.dart';
 import 'drop_shape.dart';
@@ -336,83 +337,86 @@ class _DropsWidgetState extends State<_DropsWidget>
                     ),
                   ],
                 ),
-                child: CupertinoPopupSurface(
-                  child: Padding(
-                    padding: widget.padding ?? getPadding(),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        if (widget.icon != null)
-                          Icon(
-                            widget.icon,
-                            color:
-                                widget.iconColor ??
-                                (widget.isDestructive
-                                    ? CupertinoColors.destructiveRed
-                                        .resolveFrom(context)
-                                    : CupertinoColors.secondaryLabel
-                                        .resolveFrom(context)),
-                          ),
-                        SizedBox(width: widget.icon != null ? 13 : 0),
-                        Flexible(
-                          child: Padding(
-                            padding: EdgeInsets.only(
-                              right: widget.icon != null ? iconSize : 0,
+                child: Material(
+                  color: Colors.transparent,  //fix for Material app text rendering
+                  child: CupertinoPopupSurface(
+                    child: Padding(
+                      padding: widget.padding ?? getPadding(),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          if (widget.icon != null)
+                            Icon(
+                              widget.icon,
+                              color:
+                                  widget.iconColor ??
+                                  (widget.isDestructive
+                                      ? CupertinoColors.destructiveRed
+                                          .resolveFrom(context)
+                                      : CupertinoColors.secondaryLabel
+                                          .resolveFrom(context)),
                             ),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text(
-                                  widget.title,
-                                  maxLines: widget.titleMaxLines,
-                                  overflow: TextOverflow.ellipsis,
-                                  style:
-                                      widget.titleTextStyle ??
-                                      TextStyle(
-                                        color:
-                                            widget.highContrastText
-                                                ? CupertinoColors.label
-                                                    .resolveFrom(context)
-                                                : CupertinoColors.secondaryLabel
-                                                    .resolveFrom(context),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                  textAlign: TextAlign.center,
-                                ),
-                                if (widget.subtitle != null)
-                                  Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      const SizedBox(height: 2),
-                                      Text(
-                                        widget.subtitle!,
-                                        maxLines: widget.subtitleMaxLines,
-                                        overflow: TextOverflow.ellipsis,
-                                        style:
-                                            widget.subtitleTextStyle ??
-                                            TextStyle(
-                                              color:
-                                                  widget.highContrastText
-                                                      ? CupertinoColors
-                                                          .secondaryLabel
-                                                          .resolveFrom(context)
-                                                      : CupertinoColors
-                                                          .tertiaryLabel
-                                                          .resolveFrom(context),
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    ],
+                          SizedBox(width: widget.icon != null ? 13 : 0),
+                          Flexible(
+                            child: Padding(
+                              padding: EdgeInsets.only(
+                                right: widget.icon != null ? iconSize : 0,
+                              ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    widget.title,
+                                    maxLines: widget.titleMaxLines,
+                                    overflow: TextOverflow.ellipsis,
+                                    style:
+                                        widget.titleTextStyle ??
+                                        TextStyle(
+                                          color:
+                                              widget.highContrastText
+                                                  ? CupertinoColors.label
+                                                      .resolveFrom(context)
+                                                  : CupertinoColors.secondaryLabel
+                                                      .resolveFrom(context),
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                    textAlign: TextAlign.center,
                                   ),
-                              ],
+                                  if (widget.subtitle != null)
+                                    Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        const SizedBox(height: 2),
+                                        Text(
+                                          widget.subtitle!,
+                                          maxLines: widget.subtitleMaxLines,
+                                          overflow: TextOverflow.ellipsis,
+                                          style:
+                                              widget.subtitleTextStyle ??
+                                              TextStyle(
+                                                color:
+                                                    widget.highContrastText
+                                                        ? CupertinoColors
+                                                            .secondaryLabel
+                                                            .resolveFrom(context)
+                                                        : CupertinoColors
+                                                            .tertiaryLabel
+                                                            .resolveFrom(context),
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ],
+                                    ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
